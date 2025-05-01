@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MOVIES DOWNLOAD</title>
+  </head>
+  <body>
+    <div class="logo"  >
+      <img src="logo-color.jpg" alt="logo" width="300px">
+    </div>
+    <nav class="active" id="nav">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#ai-movie">MOVIES</a></li>
+        <li><a href="file:///C:/Users/abbas%20shaikh/Desktop/GAME/animated%20navigation/aboutus.html#">ABOUT US</a></li>
+      </ul>
+      <button class="icon" id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
+    <navbar class="navbar">
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+  </div>
+  <div class="location">
+      <select>
+          <option value="new-york">ENGLISH</option>
+          <option value="los-angeles">HINDI</option>
+          <option value="chicago">MARATHI</option>
+      </select>
+  </div>
+  <div class="profile" >
+    <a href="file:///C:/Users/abbas%20shaikh/Desktop/GAME/animated%20navigation/login.html#">  <img src="abstract-user-flat-4.png" alt="Profile" width="20px"></a>
+  </div>
+    <br>
+    </navbar>
+    <br>
+    <div class="slideshow-container">
+      <div class="mySlides">
+          <img src="sikandar.avif" alt="Slide 1">
+      </div>
+      <div class="mySlides">
+          <img src="john.avif" alt="Slide 2">
+      </div>
+      <div class="mySlides">
+          <img src="pushpa.avif" alt="Slide 3">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<header id="ai-movie">
+  <h1>Movie LIST</h1>
+  </header>
+  <navlinks>
+    <ul>
+      <li class="dropdown">
+        <a href="#services" class="dropdown-toggle">LANGUAGES</a>
+        <ul class="dropdown-menu">
+          <li><a href="#ai-hindi">HINDI</a></li>
+          <li><a href="#">ENGLISH</a></li>
+          <li><a href="#">MARATHI</a></li>
+          <li><a href="#">TELUGU</a></li>
+        </ul>
+      </li>
+    </ul>
+  </navlinks> 
+  <br> 
+  <div style="text-align: center;">
+  <strong>NEW RELEASED</strong>
+</div>
+</header>
+
+<section id="movies" class="movies-container"> 
+  <div class="movie" onclick="openModal(0)">
+    <img src="john.avif" alt="Movie 1">
+    <h3>BABY JOHN</h3>
+    <button>DOWNLOAD</button>
+  </div>
+  <div class="movie" onclick="openModal(1)">
+    <img src="sikandar.avif" alt="Movie 2">
+    <h3>SIKANDAR</h3>
+    <button>DOWNLOAD</button>
+  </div>
+  <div class="movie" onclick="openModal(2)">
+    <img src="pushpa.avif" alt="Movie 3">
+    <h3>PUSHPA THE RULE</h3>
+    <button>DOWNLOAD</button>
+  </div>
+  <div class="movie" onclick="openModal(3)">
+    <img src="mufasa.jpg" alt="Movie 4">
+    <h3>MUFASA THE LION KING</h3>
+    <button>DOWNLOAD</button>
+  </div>
+  <div class="movie" onclick="openModal(4)">
+    <img src="chhaava.avif" alt="Movie 5">
+    <h3>CHHAAVA</h3>
+    <button>DOWNLOAD</button>
+  </div>
+</section>
+ <header>
+  <div style="text-align: center;">
+  <strong>TRENDING MOVIES</strong>
+</div>
+ </header>
+<section1 id="movies" class="movies-container">
+  <h2></h2>
+  <div class="movie">
+    <img src="marco.jpg" alt="Movie 1">
+    <h3>MARCO</h3>
+    <button onclick="bookMovie('Movie Title 1')">DOWNLOAD</button>
+  </div>
+  <div class="movie">
+    <img src="goat.jpg" alt="Movie 2">
+    <h3>The Greatest of All Time</h3>
+    <button onclick="bookMovie('Movie Title 2')">DOWNLOAD</button>
+  </div>
+  <div class="movie">
+    <img src="dead.jpg" alt="Movie 3">
+    <h3>DEADPOOL AND WOLVERINE</h3>
+    <button onclick="bookMovie('Movie Title 3')">DOWNLOAD</button>
+  </div>
+
+  <div class="movie">
+    <img src="kalki.webp" alt="Movie 4">
+    <h3>KALKI</h3>
+    <button onclick="bookMovie('Movie Title 4')">DOWNLOAD</button>
+  </div>
+  <div class="movie">
+    <img src="kgf.jpeg" alt="Movie 5">
+    <h3>KGF CHAPTER 2</h3>
+    <button onclick="bookMovie('Movie Title 5')">DOWNLOAD</button>
+  </div>
+</section1>
+<div id="movieModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="modal-image">
+      <img id="modalImg" src="" alt="Movie 1" />
+    </div>
+    <div class="modal-details">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <a href="#" id="modalTrailer" target="_blank">View Trailer</a>
+      <div class="modal-navigation">
+        <button class="prev" onclick="changeMovie(-1)">&#10094; </button>
+        <button class="next" onclick="changeMovie(1)"> &#10095;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p style="text-align: center"><strong>CONTACT US</strong></p> 
+  <p style="text-align: center"><strong>CONTACT:</strong>8291369731</p>
+  <p style="text-align: center"><strong>EMAIL ID:</strong>shaikhabbas034@gmail.com</p>
+<br>
+<p style="text-align: center;">DON'T CLAIM COPYWRITE ABBAS SHAIKH😎 WORKING ON THIS PROJECT</p>
+
+ </footer>
+
+    <script>
+        const toggle = document.getElementById('toggle')
+const nav = document.getElementById('nav')
+
+toggle.addEventListener('click', () => nav.classList.toggle('active'))
+let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 2000);
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = slides.length}
+        showSlides();
+    }
+   const movies = [
+        {
+          title: "BABY JOHN",
+          image: "john.avif",
+          description: "Baby John is a 2024 Indian Hindi-language action thriller film directed by Kalees that serves as a remake of Atlee's 2016 Tamil film Theri. The film stars Varun Dhawan in the title role, alongside Keerthy Suresh, Wamiqa Gabbi, Zara Zyanna and Jackie Shroff. ",
+          trailer: "https://youtu.be/qyRn3rPRw8w?si=X21WjDABu2ARs9P8",
+        },
+        {
+          title: "SIKANDAR",
+          image: "sikandar.avif",
+          description: "Sikandar is an upcoming Indian Hindi-language action thriller film directed by AR Murugadoss and produced by Sajid Nadiadwala. The film stars Salman Khan, alongside Rashmika Mandanna, Kajal Aggarwal, Sathyaraj, Sharman Joshi and Prateik Babbar.",
+          trailer: "https://youtu.be/l2AMaPCsJIQ?si=QZ_aFAIwfmJjUW_t",
+        },
+        {
+          title: "PUSHPA THE RULE",
+          image: "pushpa.avif",
+          description: "Pushpa 2: The Rule is a 2024 Indian Telugu-language action drama film[5] directed by Sukumar and produced by Mythri Movie Makers, in association with Sukumar Writings. The film stars Allu Arjun in the titular role, alongside Rashmika Mandanna, Fahadh Faasil, Jagapathi Babu, Jagadeesh Prathap Bandari, Dhananjaya, Rao Ramesh, Sunil, Anasuya Bharadwaj and Ajay.",
+          trailer: "https://youtu.be/1kVK0MZlbI4?si=iO0H3OFyFMKzJL2F",
+        },
+        {
+          title: "MUFASA THE LION KING",
+          image: "mufasa.jpg",
+          description: "Lost and alone, orphaned cub Mufasa meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of an extraordinary group of misfits searching for their destinies.",
+          trailer: "https://youtu.be/o17MF9vnabg?si=dV8W4EMOrk-M_9a3",
+        },
+        {
+          title: "CHHAAVA",
+          image: "chhaava.avif",
+          description: "Chhaava is an upcoming Indian Hindi-language historical action film based on the life of Maratha king Chhatrapati Sambhaji Maharaj, played by Vicky Kaushal. It is an adaptation of the Marathi novel Chhava by Shivaji Sawant.",
+          trailer: "https://youtu.be/nsC5PhXS19Y?si=bYvzeyeHIvY4Z0IE",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function openModal(index) {
+        currentIndex = index;
+        const movie = movies[index];
+        document.getElementById("modalImg").src = movie.image;
+        document.getElementById("modalTitle").innerText = movie.title;
+        document.getElementById("modalDescription").innerText = movie.description;
+        document.getElementById("modalTrailer").href = movie.trailer;
+        document.getElementById("movieModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("movieModal").style.display = "none";
+      }
+
+      function changeMovie(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = movies.length - 1;
+        if (currentIndex >= movies.length) currentIndex = 0;
+        openModal(currentIndex);
+      }
+    </script>
+
+
+     <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+ 
+  font-family: 'Muli', sans-serif;
+  display: top;
+  align-items: center;
+  justify-content:right ;
+  height: 100vh;
+  
+ 
+}
+.nav__header{
+padding: 1rem;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--primary-color);
+}
+
+.nav__links{
+position: absolute;
+width: 100%;  
+list-style: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 2rem;
+background-color: var(--primary-color);
+transition: 0.5s;
+z-index: -1;
+transform: translateY(-100%);
+}
+
+.logo{
+  text-align: center;
+}
+.logo img{
+  width: 300px;
+}
+nav {
+  padding: 18px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: width 0.6s linear;
+  overflow-x: hidden;
+}
+
+nav.active {
+  width: 350px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.icon {
+  background-color: #ffffff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #3e8355;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
+
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #333333;
+    padding: 10px 20px;
+    color: white;
+}
+
+
+.search-bar {
+    display: left;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+}
+
+.search-bar button:hover {
+    background-color: #777;
+}
+
+.location select {
+ margin-left: 40rem;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.location select:hover {
+    background-color: #777;
+}
+
+.profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    align-items: right;
+}
+.slideshow-container {
+            position: relative;
+            max-width: 100%;
+            max-height: 60%;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 50%;
+        }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header {
+   color: rgb(178, 125, 27);
+    padding: 20px 0;
+    text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  color: rgb(7, 7, 7);
+  text-shadow: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header .navlink ul {
+  list-style: none;
+  padding: 0;
+}
+
+header .navlink ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.movies-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.movie {
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 3rem;
+  transition: transform 0.2s;
+
+}
+.movie:hover{
+  transform: scale(1.05);
+}
+
+.movie img {
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav__links a {
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition);
+}
+
+.nav__links a:hover {
+    border-color: var(--primary-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(83, 137, 33);
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin: 0;
+    width: 200px;
+}
+
+.dropdown-menu li {
+    padding: 5px 15px;
+}
+
+.dropdown-menu li a {
+    color: var(--text-dark);
+    display: block;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+       
+      }
+
+      .modal-content {
+        display: flex;
+        background: white;
+        margin: auto;
+        padding: 60px;
+        border-radius: 10px;
+        width: 70%;
+        max-width: 900px;
+        
+      }
+
+      .modal-image img {
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
+      }
+
+      .modal-details {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .modal-details h3 {
+        margin: 0 0 10px 0;
+      }
+
+      .modal-navigation button {
+        margin: 5px;
+        padding: 10px 15px;
+        background: #9ba7b4;
+        color: white;
+        border: none;
+        border-radius: 85px;
+        cursor: pointer;
+      }
+
+      .modal-navigation button:hover {
+        background: #55585d;
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        margin: 5rem;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+
+     </style>
+  </body>
+</html>
